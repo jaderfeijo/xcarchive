@@ -22,7 +22,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Listing all archives:
+
+	$ xcarchive --list
+
+Filtering archives by bundle identifier:
+
+	$ xcarchive --list --id [APP_BUNDLE_IDENTIFIER]
+	
+Filtering archives by bundle identifier & build number:
+
+	$ xcarchive --list --id [APP_BUNDLE_IDENTIFIER] --build [BUILD_NUMBER]
+	
+Print path for an archive or archives for a given app version:
+
+	$ xcarchive --path --id [APP_BUNDLE_IDENTIFIER] --version [APP_VERSION]
+
+Exporting an archive:
+
+	$ xcarchive --id [APP_BUNDLE_IDENTIFIER] --build [BUILD_NUMER] --export [EXPORT_PATH] --options [EXPORT_OPTIONS_INFO_PLIST_PATH]
+	
+Printing usage information:
+
+	$ xcarchive --help
+
 
 ## Development
 
@@ -32,5 +55,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/xcarchive.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jaderfeijo/xcarchive.
 
